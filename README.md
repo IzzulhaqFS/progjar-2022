@@ -1,1 +1,5 @@
-# progjar-2022
+# Pemrograman Jaringan 2022
+## Deskripsi
+Merupakan repository untuk menyimpan tugas dari mata kuliah Pemrograman Jaringan.
+
+## Tugas 1 - Web Browser
