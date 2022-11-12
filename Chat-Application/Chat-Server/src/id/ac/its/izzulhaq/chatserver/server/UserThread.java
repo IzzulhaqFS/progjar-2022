@@ -26,7 +26,7 @@ public class UserThread extends Thread {
             String userName = br.readLine();
             server.addUserName(userName);
 
-            String serverMessage = "User connected: " + userName;
+            String serverMessage = "Server : User connected: " + userName;
             server.broadcast(serverMessage, this);
 
             String clientMessage;
@@ -41,7 +41,7 @@ public class UserThread extends Thread {
             server.removeUser(userName, this);
             socket.close();
 
-            serverMessage = userName + " has quit from chat";
+            serverMessage = "Server : " + userName + " has quit from chat";
             server.broadcast(serverMessage, this);
         }
         catch (IOException e) {
@@ -52,10 +52,10 @@ public class UserThread extends Thread {
 
     public void printUsers() {
         if (server.hasUsers()) {
-            writer.println("Connected users: " + server.getUserNames());
+            writer.println("Server : Connected users: " + server.getUserNames());
         }
         else {
-            writer.println("No other user connected");
+            writer.println("Server : No other user connected");
         }
     }
 
